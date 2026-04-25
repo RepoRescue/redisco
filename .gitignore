@@ -1,0 +1,13 @@
+build
+_build
+dist
+redisco.egg-info
+*.pyc
+.DS_Store
+dump.rdb
+*.swp
+/.pyflymakerc
+/.pyflymakercc
+/.emacs.desktop
+/redisco/.ropeproject/config.py
+.ropeproject

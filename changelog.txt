@@ -1,0 +1,30 @@
+
+version 0.2.0
+-------------
+Warning : This version may break your previous installation.
+I have updated the key storage process. It means that your indexes and uniques
+and alike will not be compatible. But Fear no more, if you fetch your objects
+(get_by_id) and save them again, everything will be back to normal.
+
+You may want to delete your old keys
+
+
+Lot of changes :
+* DateTime objects are now TimeZone aware. They will store time in UTC. If you
+don't specify any TZ, your local timezone will be assumed.
+* List objects (for now) behaves like Python List.
+* Optimization of Key Deletion when filtering.
+* Dropped Base64 encoding as Redis is binary safe nowadays. Keys can now be
+encoded in utf-8
+* Unittests update
+* speed : Fixed a bug where the filtered objects where sorted twice
+* speed : Objects are now fetched entirely at first (except for Counters)
+* speed : Refactor native redis object calls. The DELEGATEABLE_METHOD turned
+out to be pretty inefficient
+* speed : Optimization for caching (and returning) objects
+
+version 0.1.3
+-------------
+* Initial version from the previous maintainers
+from https://github.com/iamteem/redisco)
+

@@ -1,0 +1,30 @@
+=== Step 0: Import sanity ===
+OK /home/zhihao/hdd/RepoRescue_Clean/repos/rescue_glm/redisco/redisco/__init__.py
+
+=== Step 4: clean venv pip install -e ===
+Name: redisco
+Version: 0.2.9
+Summary: Python Containers and Simple Models for Redis
+Home-page: http://kiddouk.github.com/redisco
+Author: Tim Medina
+ERROR: Pipe to stdout was broken
+Exception ignored on flushing sys.stdout:
+BrokenPipeError: [Errno 32] Broken pipe
+
+=== Step 5: usability_validate.py ===
+[setup] redislite socket=/tmp/tmphp5bj687/redis.socket
+USABLE
+
+=== Step 6 Path B: scenario_validate.py ===
+OK: 8 events stored, alice login_count=3, carol locked=True, top=alice
+USABLE
+
+=== Step 7: bug_hunt.py ===
+(1) Unicode boundary: OK
+(2) Repeated save: OK (1 match)
+(3) Concurrent incr: OK (400 == 400)
+(4) ListField(int) 500-element round trip: OK
+(5) Missing-key filter: OK
+(6) Hash MutableMapping: OK (len after del = 1)
+---
+No bugs found in 6 probes.
